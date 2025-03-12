@@ -1,0 +1,184 @@
+<html>
+<head>
+    <title>Saravanakumar's Portfolio</title>
+    <link rel="stylesheet" href="Saravanakumar's Portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <h1>Hey, I'm <span>Saravanakumar</span></h1>
+            <p>Full-Stack Developer</p>
+            <a href="#about" class="cta-button">Explore My Work</a>
+        </div>
+    </section>
+    <section id="about">
+        <h1>About Me</h1>
+        <div class="container">
+            <div class="about-wrap">
+                <div class="about-image">
+                        <img src="C:\Users\DELL\Documents\Gsk Portfolio\Saravanakumar G.jpg" alt="saravanakumar">
+                </div>
+                <div class="about-text">
+                    <p>I am Saravanakumar, a passionate Full-Stack Developer with expertise in Java, HTML, CSS, JavaScript, SQL, and Python. I specialize in building dynamic and user-friendly web applications, combining intuitive frontend designs with robust backend functionality. With experience in projects like a Blood Donor Website, Learn Kid, and a Public Employment Service application, I have honed my skills in both frontend and backend development. I thrive on solving complex problems and creating seamless digital experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <img src="C:\Users\DELL\Documents\Gsk Portfolio\HTML Skill.png" width="110px" height="110px">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="C:\Users\DELL\Documents\Gsk Portfolio\Css Skill.png" width="110px" height="110px">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="C:\Users\DELL\Documents\Gsk Portfolio\JS Skill.png" width="110px" height="110px">
+                    <h3>Javascript</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="C:\Users\DELL\Documents\Gsk Portfolio\Python Skill.webp" width="110px" height="110px">
+                    <h3>Python</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-gallery">
+                <div class="project-item">
+                    <h3>Blood Donor Website</h3>
+                    <p>Developed a bloodbank website which connects the blood donor and the needy using HTML,CSS, JS.</p>
+                </div>
+                <div class="project-item">                    
+                    <h3>Learn Kid</h3>
+                    <p>I created a basic school service website for students and faculty using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="project-item">                   
+                    <h3>Public Employment Service</h3>
+                    <p>I have developed an application based on public employment service using java with JDBC concepts.</p>
+                </div>
+                <div class="project-item">                    
+                    <h3>Quickmart</h3>
+                    <p>I have developed the buy and sell products website using HTML, CSS and Javascript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactForm">
+    <div class="contactus">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <small class="error"></small><br>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <small class="error"></small><br>
+            </div>
+
+            <div class="input-group">
+                <label for="subject">Subject:</label>
+                <input type="subject" id="subject" name="subject" placeholder="Enter Subject">
+                <small class="error"></small><br>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+                <small class="error"></small>
+            </div><br><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section><br><br><br>
+    <div class="footer">
+    <footer>
+        <p>Connect with us</p><br>
+        <a href="https://www.facebook.com/" class="my-link">Facebook</a> |
+        <a href="https://www.instagram.com/" class="my-link">Instagram</a> |
+        <a href="https://x.com/?lang=en" class="my-link">Twitter</a> |
+        <a href="https://in.linkedin.com/" class="my-link">Linkedin</a>
+     <p>&copy; 2025 Saravanakumar's Portfolio. All rights reserved.</p>
+    </footer>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let isValid = true;
+
+    // Get input values
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // Get error elements
+    let nameError = document.querySelector("#name + .error");
+    let emailError = document.querySelector("#email + .error");
+    let subjectError = document.querySelector("#subject + .error");
+    let messageError = document.querySelector("#message + .error");
+
+    // Clear previous errors
+    nameError.innerText = "";
+    emailError.innerText = "";
+    subjectError.innerText = "";
+    messageError.innerText = "";
+
+    // Validate Name
+    if (name === "") {
+        nameError.innerText = "Name is required.";
+        isValid = false;
+    }
+
+    // Validate Email
+    if (email === "") {
+        emailError.innerText = "Email is required.";
+        isValid = false;
+    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        emailError.innerText = "Invalid email format.";
+        isValid = false;
+    }
+
+    if (subject === "") {
+        subjectError.innerText = "Subject is required.";
+        isValid = false;
+    }
+
+    // Validate Message
+    if (message === "") {
+        messageError.innerText = "Message cannot be empty.";
+        isValid = false;
+    }
+
+    // If all validations pass, show success message
+    if (isValid) {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+    }
+	else{
+	alert("Enter Your Details")
+	}
+});
+    </script>
+</body>
+</html>
